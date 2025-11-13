@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #2196f3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b;
+}
+
+
+header {
+  text-align: center;
+  padding: 140px 20px 100px;
+  background: #2196f3;
+  color: white;
+  margin-top: 60px;
+}
+
+.highlight {
+  color: #ffeb3b;
+}
+
+
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-container img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #2196f3;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-text h3 {
+  margin-top: 0;
+  color: #2196f3;
+}
+
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  background: #64b5f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #ff4081;
+}
+
+
+#contact a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.social-icons a {
+    margin: 0 10px; 
+    display: inline-block;
+}
+
+.social-icons img {
+    transition: transform 0.3s; 
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); 
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #2196f3;
+  color: white;
+}
+
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    padding-top: 180px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
