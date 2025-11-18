@@ -6,7 +6,6 @@ skills.forEach(item => {
   });
 });
 
-
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -14,4 +13,17 @@ document.querySelectorAll('nav a').forEach(link => {
       behavior: 'smooth'
     });
   });
+});
+
+/* Contact Form Popup */
+const form = document.getElementById('contactForm');
+const popup = document.getElementById('popupMessage');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // prevent form from reloading page
+  popup.style.display = 'block';
+  setTimeout(() => {
+    popup.style.display = 'none';
+  }, 3000); // popup disappears after 3 seconds
+  form.reset(); // clear form
 });

@@ -7,7 +7,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
 nav {
   position: fixed;
   width: 100%;
@@ -45,7 +44,6 @@ nav ul li a:hover {
   color: #ffeb3b;
 }
 
-
 header {
   text-align: center;
   padding: 140px 20px 100px;
@@ -58,7 +56,6 @@ header {
   color: #ffeb3b;
 }
 
-
 section {
   padding: 80px 20px;
   max-width: 900px;
@@ -67,7 +64,6 @@ section {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 
 .about-container {
   display: flex;
@@ -94,7 +90,6 @@ section {
   color: #2196f3;
 }
 
-
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -114,7 +109,6 @@ section {
   background: #ff4081;
 }
 
-
 #contact a {
   color: #2196f3;
   text-decoration: none;
@@ -125,24 +119,22 @@ section {
 }
 
 .social-icons {
-    text-align: center; 
-    margin: 20px 0; 
+  text-align: center; 
+  margin: 20px 0; 
 }
 
 .social-icons a {
-    margin: 0 10px; 
-    display: inline-block;
+  margin: 0 10px; 
+  display: inline-block;
 }
 
 .social-icons img {
-    transition: transform 0.3s; 
+  transition: transform 0.3s; 
 }
 
 .social-icons img:hover {
-    transform: scale(1.2); 
+  transform: scale(1.2); 
 }
-
-
 
 footer {
   text-align: center;
@@ -150,7 +142,6 @@ footer {
   background: #2196f3;
   color: white;
 }
-
 
 @media (max-width: 700px) {
   nav {
@@ -171,4 +162,61 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+#experience ul,
+#qualification ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+#interests p {
+  font-size: 16px;
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2196f3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background: #ff4081;
+}
+
+/* Popup Message */
+.popup-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1001;
 }
