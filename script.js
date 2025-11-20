@@ -15,15 +15,22 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
-/* Contact Form Popup */
-const form = document.getElementById('contactForm');
+const form = document.getElementById('messageForm');  
 const popup = document.getElementById('popupMessage');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // prevent form from reloading page
+  e.preventDefault();
+
   popup.style.display = 'block';
+  popup.style.opacity = '1';
+
+  setTimeout(() => {
+    popup.style.opacity = '0';
+  }, 2500);
+
   setTimeout(() => {
     popup.style.display = 'none';
-  }, 3000); // popup disappears after 3 seconds
-  form.reset(); // clear form
+  }, 3000);
+
+  form.reset();
 });
