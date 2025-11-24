@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Details — Bipasna Dhungana</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 { color: #2196f3; }
+    .form-data {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .form-data p { font-size: 18px; margin: 10px 0; }
+    button {
+      padding: 10px 15px;
+      margin-top: 20px;
+      background: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #1976d2; }
+  </style>
+</head>
+<body>
+
+  <h1>Form Submission Details</h1>
+
+  <div class="form-data" id="formDataDisplay">
+    <!-- JS will insert form data here -->
+  </div>
+
+  <button onclick="goBack()">Back to Portfolio</button>
+
+  <script>
+    // Step 2: Get form data from localStorage
+    const data = JSON.parse(localStorage.getItem('formData'));
+
+    const display = document.getElementById('formDataDisplay');
+
+    if(data) {
+      display.innerHTML = `
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong> ${data.msg}</p>
+      `;
+    } else {
+      display.innerHTML = `<p>No form data found.</p>`;
+    }
+
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+
