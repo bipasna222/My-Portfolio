@@ -50,54 +50,11 @@ projects.forEach(p => {
 });
 
 
-// === Step 4: Canvas Drawing (Animated Version) ===
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-
-let x = 20; // starting x position for the circle
-let y = 75; // y position stays constant
-let radius = 20;
-let speed = 2;
-
-function animate() {
-  // Clear previous frame
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Draw a rectangle (like a platform)
-  ctx.fillStyle = "#FF5733";
-  ctx.fillRect(50, 100, 200, 20);
-
-  // Draw a moving circle
-  ctx.beginPath();
-  ctx.arc(x, y, radius, 0, Math.PI * 2);
-  ctx.fillStyle = "#33FF57";
-  ctx.fill();
-  ctx.closePath();
-
-  // Move circle
-  x += speed;
-  if (x + radius > canvas.width || x - radius < 0) {
-    speed = -speed; // reverse direction on edge
-  }
-
-  requestAnimationFrame(animate); // loop animation
-}
-
-animate(); // start animation
-
-// Optional: draw on click
-canvas.addEventListener("click", function(e){
-  const rect = canvas.getBoundingClientRect();
-  const clickX = e.clientX - rect.left;
-  const clickY = e.clientY - rect.top;
-
-  ctx.beginPath();
-  ctx.arc(clickX, clickY, 10, 0, Math.PI*2);
-  ctx.fillStyle = "blue";
-  ctx.fill();
-  ctx.closePath();
-});
-
+// === Step 4: Canvas Drawing ===
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = '#2196f3';
+ctx.fillRect(20, 20, 100, 50);
 
 // Step 5: Image Slider
 let slideIndex = 0;
@@ -129,9 +86,9 @@ toggle.addEventListener('click', () => {
   
   // Optional: change button text
   if(document.body.classList.contains('dark-mode')) {
-    toggle.textContent = '☀️Light Mode';
+    toggle.textContent = '☀️ Light Mode';
   } else {
-    toggle.textContent = '🌙Dark Mode';
+    toggle.textContent = '🌙 Dark Mode';
   }
 });
 

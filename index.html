@@ -21,7 +21,7 @@
     </ul>
     
     <!-- Dark / Light Mode Toggle -->
-    <button id="themeToggle">Toggle Dark</button>
+    <button id="themeToggle" style="margin-left:-650px;padding:5px 70px;cursor:pointer;">Toggle Dark</button>
   </nav>
 
   <header id="home">
@@ -130,6 +130,7 @@
     <h3>Project 1</h3>
     <p>My first project</p>
   </div>
+
 </section>
 
 
@@ -144,79 +145,6 @@
     </audio>
     <canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
   </section>
-
- <script>
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-
-// Fake “project card” elements
-const project = {
-  title: "My First Project",
-  description: "A sample project for my portfolio",
-  screenshotColor: "#4CAF50",
-  url: "https://bipasna222.github.io/My-Portfolio/", 
-  x: 20,
-  y: 20,
-  width: 360,
-  height: 160
-};
-
-let progress = 0;
-let isHover = false;
-
-// Detect hover
-canvas.addEventListener("mousemove", e => {
-  const rect = canvas.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-  isHover = mouseX >= project.x && mouseX <= project.x + project.width &&
-            mouseY >= project.y && mouseY <= project.y + project.height;
-});
-
-// Click to open portfolio
-canvas.addEventListener("click", () => {
-  if (isHover) window.open(project.url, "_blank");
-});
-
-function drawCard() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Card background (hover effect)
-  ctx.fillStyle = isHover ? "#e0f7fa" : "#f8f8f8";
-  ctx.strokeStyle = "#ccc";
-  ctx.lineWidth = 2;
-  ctx.fillRect(project.x, project.y, project.width, project.height);
-  ctx.strokeRect(project.x, project.y, project.width, project.height);
-
-  // Project title
-  ctx.fillStyle = "#333";
-  ctx.font = "bold 18px Arial";
-  ctx.fillText(project.title, 30, 50);
-
-  // Project description
-  ctx.font = "14px Arial";
-  ctx.fillText(project.description, 30, 80);
-
-  // Screenshot box
-  ctx.fillStyle = project.screenshotColor;
-  ctx.fillRect(30, 100, 100, 50);
-  ctx.strokeStyle = "#000";
-  ctx.strokeRect(30, 100, 100, 50);
-
-  // Animated progress bar
-  ctx.strokeStyle = "#000";
-  ctx.strokeRect(150, 120, 200, 20);
-  ctx.fillStyle = "#2196F3";
-  ctx.fillRect(150, 120, progress, 20);
-  progress += 2;
-  if (progress > 200) progress = 0;
-
-  requestAnimationFrame(drawCard);
-}
-
-drawCard();
-  </script>
-
 
   <section id="slider">
   <h2>Gallery</h2>
