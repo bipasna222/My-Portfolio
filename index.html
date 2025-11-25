@@ -21,7 +21,7 @@
     </ul>
     
     <!-- Dark / Light Mode Toggle -->
-    <button id="themeToggle" style="margin-left:-650px;padding:5px 70px;cursor:pointer;">Toggle Dark</button>
+    <button id="themeToggle">Toggle Dark</button>
   </nav>
 
   <header id="home">
@@ -126,19 +126,9 @@
   <h2>My Projects</h2>
   
   <!-- Each project is a clickable card -->
-  <div class="project" data-url="https://example.com/project1">
+  <div class="project" data-url="https://bipasna222.github.io/My-Portfolio/">
     <h3>Project 1</h3>
     <p>My first project</p>
-  </div>
-
-  <div class="project" data-url="https://example.com/project2">
-    <h3>Project 2</h3>
-    <p>My second project</p>
-  </div>
-
-  <div class="project" data-url="https://example.com/project3">
-    <h3>Project 3</h3>
-    <p>My third project</p>
   </div>
 </section>
 
@@ -154,6 +144,72 @@
     </audio>
     <canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
   </section>
+
+ <script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+// Fake “project card” elements
+const project = {
+  title: "My First Project",
+  description: "A sample project for my portfolio",
+  colorBox: "#4CAF50",
+  url: "https://bipasna222.github.io/My-Portfolio/" // link to open when clicked
+};
+
+// Animation for a small loading bar inside the card
+let progress = 0;
+function animateProject() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw card background
+  ctx.fillStyle = "#f0f0f0";
+  ctx.fillRect(20, 20, 360, 160);
+
+  // Draw project title
+  ctx.fillStyle = "#333";
+  ctx.font = "18px Arial";
+  ctx.fillText(project.title, 30, 50);
+
+  // Draw project description
+  ctx.font = "14px Arial";
+  ctx.fillText(project.description, 30, 80);
+
+  // Draw a color box to simulate “project screenshot”
+  ctx.fillStyle = project.colorBox;
+  ctx.fillRect(30, 100, 100, 50);
+
+  // Draw progress bar animation
+  ctx.strokeStyle = "#000";
+  ctx.strokeRect(150, 120, 200, 20); // border
+  ctx.fillStyle = "#2196F3";
+  ctx.fillRect(150, 120, progress, 20); // animated fill
+  progress += 2;
+  if(progress > 200) progress = 0;
+
+  requestAnimationFrame(animateProject);
+}
+
+animateProject();
+
+// Make canvas clickable like a project card
+canvas.addEventListener("click", function(e){
+  const rect = canvas.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const clickY = e.clientY - rect.top;
+
+  // Optional: draw a small circle where user clicked
+  ctx.beginPath();
+  ctx.arc(clickX, clickY, 10, 0, Math.PI*2);
+  ctx.fillStyle = "blue";
+  ctx.fill();
+  ctx.closePath();
+
+  // Open project link
+  window.open(project.url, "_blank");
+});
+</script>
+
 
   <section id="slider">
   <h2>Gallery</h2>

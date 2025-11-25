@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 60px;
+  padding: 15px -25px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   z-index: 1000;
 }
@@ -34,6 +34,8 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+
+
 
 nav ul li a {
   color: white;
@@ -215,6 +217,7 @@ footer {
     gap: 10px;
   }
 
+
   header {
     padding-top: 180px;
   }
@@ -314,7 +317,6 @@ body.dark-mode a {
 }
 
 #themeToggle {
-  right: 20px;
   padding: 6px 12px;
   font-size: 14px;
   background: #ffeb3b;
