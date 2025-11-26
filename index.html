@@ -20,7 +20,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     
-    <!-- Dark / Light Mode Toggle -->
     <button id="themeToggle" style="margin-left:-650px;padding:5px 70px;cursor:pointer;">Toggle Dark</button>
   </nav>
 
@@ -60,24 +59,11 @@
       <span>Git</span>
     </div>
 
-    <!-- Step 1: Skill Progress Bars -->
     <div class="skill-bars">
-      <div class="skill-bar" data-skill="HTML" data-percent="90%">
-        <span>HTML</span>
-        <div class="progress"></div>
-      </div>
-      <div class="skill-bar" data-skill="CSS" data-percent="85%">
-        <span>CSS</span>
-        <div class="progress"></div>
-      </div>
-      <div class="skill-bar" data-skill="JavaScript" data-percent="80%">
-        <span>JavaScript</span>
-        <div class="progress"></div>
-      </div>
-      <div class="skill-bar" data-skill="Python" data-percent="75%">
-        <span>Python</span>
-        <div class="progress"></div>
-      </div>
+      <div class="skill-bar" data-skill="HTML" data-percent="90%"><span>HTML</span><div class="progress"></div></div>
+      <div class="skill-bar" data-skill="CSS" data-percent="85%"><span>CSS</span><div class="progress"></div></div>
+      <div class="skill-bar" data-skill="JavaScript" data-percent="80%"><span>JavaScript</span><div class="progress"></div></div>
+      <div class="skill-bar" data-skill="Python" data-percent="75%"><span>Python</span><div class="progress"></div></div>
     </div>
   </section>
 
@@ -95,7 +81,6 @@
     <p>Coding, Designing, Travelling, Exploring new technologies, Working with pets and also dancing.</p>
   </section>
 
-  <!-- Step 2: Contact + Message Form -->
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:bipashanachhetri@gmail.com">bipashanachhetri@gmail.com</a></p>
@@ -123,43 +108,36 @@
   <div id="popupMessage" class="popup-message">Your message has been sent!</div>
 
   <section id="projects">
-  <h2>My Projects</h2>
-  
-  <!-- Each project is a clickable card -->
-  <div class="project" data-url="https://bipasna222.github.io/My-Portfolio/">
-    <h3>Project 1</h3>
-    <p>My first project</p>
-  </div>
+    <h2>My Projects</h2>
+    <div class="project" data-url="https://bipasna222.github.io/My-Portfolio/">
+      <h3>Project 1</h3>
+      <p>My first project</p>
+    </div>
+  </section>
 
-</section>
-
-
-  <!-- Step 4: Media Section -->
   <section id="media">
     <h2>Media Section</h2>
     <video width="320" controls>
-      <source src="sample.mp4" type="video/mp4">
+      <source src="MyVideo.mp4" type="video/mp4">
     </video>
     <audio controls>
-      <source src="sample.mp3" type="audio/mpeg">
+      <source src="MyAudio.mp3" type="audio/mpeg">
     </audio>
     <canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
   </section>
 
   <section id="slider">
-  <h2>Gallery</h2>
-  <div class="slider-container">
-    <button id="prev">&#10094;</button>
-    <div class="slides">
-      <img src="nepal1.jpg" class="slide" style="display:block">
-      <img src="nepal2.jpg" class="slide">
-      <img src="nepal3.jpg" class="slide">
+    <h2>Gallery</h2>
+    <div class="slider-container">
+      <button id="prev">&#10094;</button>
+      <div class="slides">
+        <img src="nepal1.jpg" class="slide" style="display:block">
+        <img src="nepal2.jpg" class="slide">
+        <img src="nepal3.jpg" class="slide">
+      </div>
+      <button id="next">&#10095;</button>
     </div>
-    <button id="next">&#10095;</button>
-  </div>
-</section>
-
-
+  </section>
 
   <div class="social-icons">
     <a href="https://www.instagram.com/" target="_blank">
@@ -173,13 +151,14 @@
     </a>
   </div>
 
-  <!-- Step 7: Back-to-Top Button -->
   <button id="backTop" style="display:none;position:fixed;bottom:30px;right:30px;padding:10px 15px;">Top</button>
 
   <footer>
     <p>© 2025 Bipasna Dhungana | All Rights Reserved</p>
   </footer>
 
+  <!-- Main JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
